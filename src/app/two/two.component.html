@@ -1,0 +1,22 @@
+<div>
+<table>
+    <thead>
+        <tr>
+            <th>Login</th>
+            <th>ID</th>
+            <th>Node ID</th>
+            <th>Avatar</th>
+        </tr>
+    </thead>
+     <tbody *ngFor="let item of li">  
+        <tr *ngFor="let ar of item">
+        <td>{{ar.login}}</td>
+        <td>{{ar.id}}</td>
+        <td>{{ar.node_id}}</td>
+        <td>{{ar.avatar_url}}</td>
+   
+    </tr>
+ </tbody> 
+</table>
+
+</div>

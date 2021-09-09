@@ -1,0 +1,33 @@
+
+
+  <div class="container">
+    <div class="title">Please Fill The Below Details</div>
+    <div class="content">
+      <form action="" [formGroup]="userForm" (ngSubmit)="submitForm()" >
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" placeholder="Enter your name" formControlName="name" required>
+            <div *ngIf="(this.userForm.get('name')?.touched || this.userForm.get('name')?.dirty) && this.userForm.get('name')?.errors" class="error">Enter a valid name</div><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" formControlName="email" placeholder="Enter your email" required>
+            <div *ngIf="(this.userForm.get('email')?.touched || this.userForm.get('email')?.dirty) && this.userForm.get('email')?.errors" class="error">Enter a valid email id</div><br>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" formControlName="phoneNum" placeholder="Enter your number" required>
+            <div *ngIf="(this.userForm.get('phoneNum')?.touched || this.userForm.get('phoneNum')?.dirty) && this.userForm.get('phoneNum')?.errors" class="error">Enter a valid phone number</div><br>
+          </div>
+          
+        
+        <div class="button">
+          <input type="submit" value="Submit">
+        </div>
+    </div>
+    </form>
+  </div>
+
+
+
